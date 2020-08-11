@@ -1,0 +1,51 @@
+﻿@model VectorHostel.Models.chi_tiet_dat_giuong
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>chi_tiet_dat_giuong</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngayden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.giuong.maphong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.giuong.maphong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHIEUDATGIUONG.makh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHIEUDATGIUONG.makh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

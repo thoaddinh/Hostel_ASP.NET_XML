@@ -1,0 +1,70 @@
+﻿@model VectorHostel.Models.giuong
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+   
+}
+
+
+
+
+@using (Html.BeginForm("Create","giuongs",FormMethod.Post, new {enctype ="multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <form   >
+        <h2 class="text-center">Thêm giường</h2>        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            Mã giường:
+                @Html.EditorFor(model => model.magiuong, new { htmlAttributes = new { @class = "form-control" ,@disabled = "disabled",  @placeholder = ViewBag.mg } })
+                @Html.ValidationMessageFor(model => model.magiuong, "", new { @class = "text-danger" })
+            
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.maphong, "Thuộc phòng", htmlAttributes: new { @class = "control-label " })
+            
+                @Html.DropDownList("maphong", null, htmlAttributes: new { @class = "form-control text-center" })
+                @Html.ValidationMessageFor(model => model.maphong, "", new { @class = "text-danger" })
+           
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.mota,"mô tả", htmlAttributes: new { @class = "control-label " })
+            <div class="col-md-12">
+                @Html.TextAreaFor(model => model.mota,3,35, new { htmlAttributes = new { @class = "form-control text-center " } })
+                @Html.ValidationMessageFor(model => model.mota, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.malg, "loại giường", htmlAttributes: new { @class = "control-label " })
+           
+                @Html.DropDownList("malg", null, htmlAttributes: new { @class = "form-control text-center" })
+                @Html.ValidationMessageFor(model => model.malg, "", new { @class = "text-danger" })
+            
+        </div>
+       
+        
+
+        <div class="form-group" style="margin:0 auto">
+            
+                <input type="submit" value="Create" class="btn btn-primary" />
+          
+           
+                <a href="~/Views/giuongs/Index.cshtml" role="button" class="btn btn-primary" aria-pressed="true">Cancel</a>
+           
+        </div>
+    </form>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

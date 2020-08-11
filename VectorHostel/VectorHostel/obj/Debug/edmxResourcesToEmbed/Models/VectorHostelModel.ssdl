@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VectorHostelModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chi_tiet_dat_giuong">
+    <Key>
+      <PropertyRef Name="maphieu" />
+      <PropertyRef Name="magiuong" />
+    </Key>
+    <Property Name="maphieu" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="magiuong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="ngayden" Type="date" Nullable="false" />
+    <Property Name="ngaydi" Type="date" />
+  </EntityType>
+  <EntityType Name="giuong">
+    <Key>
+      <PropertyRef Name="magiuong" />
+    </Key>
+    <Property Name="magiuong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="maphong" Type="nchar" MaxLength="10" />
+    <Property Name="mota" Type="nvarchar" MaxLength="50" />
+    <Property Name="malg" Type="nvarchar" MaxLength="10" />
+    <Property Name="tinhtrang" Type="bit" />
+  </EntityType>
+  <EntityType Name="khachhang">
+    <Key>
+      <PropertyRef Name="makh" />
+    </Key>
+    <Property Name="makh" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="hoten" Type="nvarchar" MaxLength="50" />
+    <Property Name="ngaysinh" Type="date" />
+    <Property Name="sdt" Type="nchar" MaxLength="10" />
+    <Property Name="diachi" Type="nvarchar" MaxLength="50" />
+    <Property Name="gioitinh" Type="bit" />
+  </EntityType>
+  <EntityType Name="loaigiuong">
+    <Key>
+      <PropertyRef Name="malg" />
+    </Key>
+    <Property Name="malg" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenlg" Type="nvarchar" MaxLength="50" />
+    <Property Name="mota" Type="nvarchar" MaxLength="50" />
+    <Property Name="dongia" Type="int" />
+    <Property Name="hinhanh" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="loaiphong">
+    <Key>
+      <PropertyRef Name="malp" />
+    </Key>
+    <Property Name="malp" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenlp" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="PHIEUDATGIUONG">
+    <Key>
+      <PropertyRef Name="maphieu" />
+    </Key>
+    <Property Name="maphieu" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="makh" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="soluong_giuong" Type="int" />
+  </EntityType>
+  <EntityType Name="phong">
+    <Key>
+      <PropertyRef Name="maphong" />
+    </Key>
+    <Property Name="maphong" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="tenphong" Type="nvarchar" MaxLength="50" />
+    <Property Name="malp" Type="nvarchar" MaxLength="10" />
+    <Property Name="tang" Type="int" />
+    <Property Name="sogiuong" Type="int" />
+  </EntityType>
+  <Association Name="FK_chi_tiet_dat_giuong_giuong">
+    <End Role="giuong" Type="Self.giuong" Multiplicity="1" />
+    <End Role="chi_tiet_dat_giuong" Type="Self.chi_tiet_dat_giuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="giuong">
+        <PropertyRef Name="magiuong" />
+      </Principal>
+      <Dependent Role="chi_tiet_dat_giuong">
+        <PropertyRef Name="magiuong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_chi_tiet_dat_giuong_PHIEUDATGIUONG">
+    <End Role="PHIEUDATGIUONG" Type="Self.PHIEUDATGIUONG" Multiplicity="1" />
+    <End Role="chi_tiet_dat_giuong" Type="Self.chi_tiet_dat_giuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PHIEUDATGIUONG">
+        <PropertyRef Name="maphieu" />
+      </Principal>
+      <Dependent Role="chi_tiet_dat_giuong">
+        <PropertyRef Name="maphieu" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_giuong_loaigiuong">
+    <End Role="loaigiuong" Type="Self.loaigiuong" Multiplicity="0..1" />
+    <End Role="giuong" Type="Self.giuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaigiuong">
+        <PropertyRef Name="malg" />
+      </Principal>
+      <Dependent Role="giuong">
+        <PropertyRef Name="malg" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_giuong_phong">
+    <End Role="phong" Type="Self.phong" Multiplicity="0..1" />
+    <End Role="giuong" Type="Self.giuong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="phong">
+        <PropertyRef Name="maphong" />
+      </Principal>
+      <Dependent Role="giuong">
+        <PropertyRef Name="maphong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PHIEUDATGIUONG_khachhang">
+    <End Role="khachhang" Type="Self.khachhang" Multiplicity="1" />
+    <End Role="PHIEUDATGIUONG" Type="Self.PHIEUDATGIUONG" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="khachhang">
+        <PropertyRef Name="makh" />
+      </Principal>
+      <Dependent Role="PHIEUDATGIUONG">
+        <PropertyRef Name="makh" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_phong_loaiphong">
+    <End Role="loaiphong" Type="Self.loaiphong" Multiplicity="0..1" />
+    <End Role="phong" Type="Self.phong" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="loaiphong">
+        <PropertyRef Name="malp" />
+      </Principal>
+      <Dependent Role="phong">
+        <PropertyRef Name="malp" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VectorHostelModelStoreContainer">
+    <EntitySet Name="chi_tiet_dat_giuong" EntityType="Self.chi_tiet_dat_giuong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="giuong" EntityType="Self.giuong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="khachhang" EntityType="Self.khachhang" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loaigiuong" EntityType="Self.loaigiuong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="loaiphong" EntityType="Self.loaiphong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PHIEUDATGIUONG" EntityType="Self.PHIEUDATGIUONG" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="phong" EntityType="Self.phong" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_chi_tiet_dat_giuong_giuong" Association="Self.FK_chi_tiet_dat_giuong_giuong">
+      <End Role="giuong" EntitySet="giuong" />
+      <End Role="chi_tiet_dat_giuong" EntitySet="chi_tiet_dat_giuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_chi_tiet_dat_giuong_PHIEUDATGIUONG" Association="Self.FK_chi_tiet_dat_giuong_PHIEUDATGIUONG">
+      <End Role="PHIEUDATGIUONG" EntitySet="PHIEUDATGIUONG" />
+      <End Role="chi_tiet_dat_giuong" EntitySet="chi_tiet_dat_giuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_giuong_loaigiuong" Association="Self.FK_giuong_loaigiuong">
+      <End Role="loaigiuong" EntitySet="loaigiuong" />
+      <End Role="giuong" EntitySet="giuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_giuong_phong" Association="Self.FK_giuong_phong">
+      <End Role="phong" EntitySet="phong" />
+      <End Role="giuong" EntitySet="giuong" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PHIEUDATGIUONG_khachhang" Association="Self.FK_PHIEUDATGIUONG_khachhang">
+      <End Role="khachhang" EntitySet="khachhang" />
+      <End Role="PHIEUDATGIUONG" EntitySet="PHIEUDATGIUONG" />
+    </AssociationSet>
+    <AssociationSet Name="FK_phong_loaiphong" Association="Self.FK_phong_loaiphong">
+      <End Role="loaiphong" EntitySet="loaiphong" />
+      <End Role="phong" EntitySet="phong" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,4 @@
+File báo cáo bao gồm:
+- file word báo cáo
+- project vectorhostel
+- file xml và xsd nằm trong thư mục xml của project

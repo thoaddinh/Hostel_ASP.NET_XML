@@ -1,0 +1,19 @@
+﻿@model IEnumerable<VectorHostel.Models.loaigiuong>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+
+
+<div class="container">
+    <article class="col-md-12 col-lg-12">
+        <section id="giuong">
+            <div class="featurette-title-content"><h3 class="featurette-title">Danh sách Giường</></h3></div>
+            <div class="row featurette">
+                @Html.Partial("~/Views/Share/DS_giuong.cshtml");
+            </div>
+        </section>
+        <section id="dichvu"></section>
+    </article>
+</div>

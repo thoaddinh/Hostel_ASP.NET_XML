@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Vector Hostel</title>
+	<meta charset="utf-8">
+	<meta name="view-port" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" type="text/css" href="./initial/css/bootstrap.min.css">
+	
+	<script type="text/javascript" src="../js/hostel.js"></script>
+	
+	<script src="./initial/jquery.min.js"></script>
+	<script src="./initial/js/bootstrap.min.js"></script>
+	<script src="./initial/js/fontawesome-all.min.js"></script>
+	
+<link rel="stylesheet" type="text/css" href="./css/hostel.css">
+</head>
+<body>
+	<header>
+		
+
+ 
+				
+				<!-- <form class="form-inline navbar-right">
+					<span class="text-warning">username:</span><input type="text" name="user">
+					<span class="text-warning">password:</span> <input type="password">
+				</form> -->
+				
+			
+		
+		<div class="container-fluid">
+			<div class="banner">
+			
+			<form class="form-inline my-2 my-lg-0  d-none d-lg-block" id="form1">
+				<input type="text" id="search-input" placeholder="search" class="form-control mr-sm-2"></input>
+				<button id="btn-search" class="btn btn-outline-success my-2 my-sm-0"><span class="fa fa-search mx-2"></span></button>
+			</form>
+		</div>
+		</div>
+<div class=" d-block d-lg-none" id="form2">
+		<form class ="form-inline my-2 my-lg-0" >
+			<input type="text" id="search-input" placeholder="search" class="form-control mr-sm-2 "></input>
+		<button id="btn-search" class="btn btn-outline-success my-2 my-sm-0"><span class="fa fa-search mx-2"></span></button>
+		</form>
+	</div>
+	</header>
+	<nav class="navbar navbar-dark bg-dark navbar-expand-lg " id="menu1">
+		<div class="container">
+			<span role="button" class="btn btn-light navbar-toggler-icon float-left navbar-toggler " data-toggle="collapse" data-target="#collapseMenu" aria-controls="collapseSubMenu" aria-expanded="false" aria-label="Toggle navigation">
+			</span>
+			<span class="fab fa-blogger navbar-brand text-warning "></span>
+			<div class="collapse navbar-collapse" id="collapseMenu">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item"><a href="hostel.html" class="nav-link active text-warning">Trang chủ</a></li>
+					<li class="nav-item"><a href="#" class="nav-link  text-white">Đặt phòng</a>
+							
+					</li>
+					<li class="nav-item dropdown"><a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">Dịch vụ</a>
+						<ul class="dropdown-menu bg-dark">
+							<li class="dropdown-item"><a class="nav-link " href="giaodien/dvgiatui.html"> Giặt ủi</a></li>	
+							<li class="dropdown-item dropdown"><a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#"> tour</a>
+									
+							</li>		
+						</ul>
+					</li>
+					<li class="nav-item dropdown"><a href="#" class="nav-link text-white">Liên Hệ</a></li>			
+				</ul>					
+			
+			
+				<form class="form-inline navbar-right" id="navbar-right">
+					<a href="www.facebook.com"><span class="fab fa-facebook-f mx-2 text-white">  </span></a>
+					<a href="www.facebook.com"><span class="fab fa-twitter mx-2 text-white">  </span></a>
+					<a href="www.facebook.com"><span class="fab fa-instagram mx-2 text-white"></span></a>
+					<a href="www.facebook.com"><span class="fab fa-tumblr mx-2 text-white" ></span></a>
+					<a href="www.facebook.com"><span class="fab fa-youtube mx-2 text-white"></span></a>
+					
+					
+				<span class="fas fa-user text-white mx-2" ></span><a href="#"><span class="text-white">Sign Up</span></a>
+				<span class="fas fa-sign-in-alt text-white mx-2"></span><a><span class="text-white" onclick="document.getElementById('id01').style.display='block'">Sign In</span></a>
+				</form>
+						
+				<div id="id01" class="modal">
+				  <form class="modal-content animate" action="QuanLy.html">
+				    <div class="imgcontainer">
+				      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+				      <img src="images/img_avatar2.png" alt="Avatar" class="avatar">
+				    </div>
+
+				    <div class="container">
+				      <label for="uname"><b>Username</b></label>
+				      <input type="text" placeholder="Enter Username" name="uname" required id="user">
+
+				      <label for="psw"><b>Password</b></label>
+				      <input type="password" placeholder="Enter Password" name="psw" required id="pwd">
+				        
+				      <button type="submit" id ="btnLogin">Login</button>
+				      <label>
+				        <input type="checkbox" checked="checked" name="remember"> Remember me
+				      </label>
+				    </div>
+
+				    <div class="container" style="background-color:#f1f1f1">
+				      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+				      <span class="psw">Forgot <a href="#">password?</a></span>
+				    </div>
+				  </form>
+				</div>
+				</form>
+			</div>
+		</div>
+	</nav>
+	
+	<div id="logo" class="text-center">
+		<a href="#"> <img src="images/logo.jpg" class="d-block mx-auto"></a>
+		
+	</div>
+	
+	
+		<section>
+			<div id="myCarousel" class="carousel slide" data-ride ="carousel">
+
+			<ol class="carousel-indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"> </li>
+				<li data-target ="#myCarousel" data-slide-to="1"></li>
+				<li data-target="#myCarousel" data-slide-to="2"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<a href="#"> <img src="images/carousel1.jpg" class="d-block w-100" alt="second-slide"></a>
+					<div class="container">
+						<div class="carousel-caption">
+						<h3>Thư giãn</h3>
+						<p>October 16, 2017</p>
+						<p><a href="#" class="btn btn-primary" role="button">View more</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"> <img src="images/carousel2.jpg" class="d-block w-100" alt="second-slide"></a>
+					<div class="container">
+						<div class="carousel-caption">
+						<h3>Mơ mộng</h3>
+						<p>October 16, 2017</p>
+						<p><a href="#" class="btn btn-primary" role="button">View more</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="#"> <img src="images/carousel3.jpg" class="d-block w-100" alt="third-slide"></a>
+					<div class="container">
+				<div class="carousel-caption">
+				<h3>Riêng tư</h3>
+				<p>October 17, 2017</p>
+				<p><a href="#" class="btn btn-primary" role="button">View more</a></p>
+				</div>
+				</div>
+			</div>
+			<a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true">
+					
+				</span><span class="sr-only">Previous</span>
+			</a>
+			<a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true">
+					
+				</span><span class="sr-only">Next</span>
+			</a>
+			
+		</div>
+		</section>
+<div class="container">
+	<div class="row featurette">
+		<article class="col-md-12 col-lg-8">
+			<h3>
+				<a href="#">Phòng</a>
+				<span><hr class="featurette-divider"></span>
+			</h3>	
+		<div class="row">
+			<div class="col-lg-4 col-md-6 text-center row_item" ><a href="#"> <img src="images/featurette2.jpg"></a>
+				<p class="featurette-title text-white">Phòng đơn</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center row_item"><a href="#"> <img src="images/featurette7.jpg"></a>
+				<p class="featurette-title text-white">Phòng đôi</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+			<div class="col-lg-4 col-md-6 text-center row_item">
+				<a href="#"> <img src="images/featurette1.jpg"></a>
+				<p class="featurette-title text-white">Phòng 4 người</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-6 text-center row_item" style="border: 2px solid yellow"><a href="#"> <img src="images/featurette2.jpg"></a>
+				<p class="featurette-title text-white ">Phòng 6 người</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+			<div class="col-lg-4 col-md-6  text-center  row_item"><a href="#"> <img src="images/featurette7.jpg"></a>
+				<p class="featurette-title text-white">Phòng 8 người</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+			<div class="col-lg-4 col-md-6  text-center  row_item"><a href="#"> <img src="images/featurette1.jpg"></a>
+			<p class="featurette-title text-white">Phòng vip</p>
+				<p class="featurette-time" >Giá: </p>
+			</div>
+		</div>
+		<h3>
+			<a href="#">Hostel Food</a>
+			<span><hr class="featurette-divider"></span>
+		</h3>	
+		<div class="row">
+			<div class="col-md-6 travel">
+				<a href="#"> <img src="images/featurette9.jpg"></a>
+				<div class="travel-content">
+					<p class="title">Món ăn Châu Âu</p>
+				
+				</div>
+			</div>
+			<div class="col-md-6 travel">
+				<a href="#"> <img src="images/featurette11.jpg"></a>
+				<div class="travel-content">
+					<p class="title">Món ăn châu Á</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 travel">
+				<a href="#"> <img src="images/featurette5.jpg"></a>
+				<div class="travel-content">
+					<p class="title">Món ăn Phi</p>
+					
+				</div>
+			</div>
+			<div class="col-md-6 travel">
+				<a href="nhatrang_beach.html"> <img src="images/featurette8.jpg"></a>
+				<div class="travel-content">
+					<p class="title">Món ăn Mỹ</p>
+					
+				</div>
+			</div>
+		</div>
+		<h3>
+			<a href="#">Dịch vụ</a>
+ 			<span><hr class="featurette-divider"></span>
+		</h3>
+		<div class="row last-post">
+			<div class="col-md-6">
+				<a href="#"> <img src="images/giatui.jpg" ></a>
+			</div>
+			<div class="last-post-content col-md-6">
+					<span><a href="#">Giặt ủi</a></span>
+					<p>Dịch vụ giặt ủi cho khách hàng...</p>
+			</div>
+		</div>
+		<div class="row last-post">
+			<div class="col-md-6">
+				<a href="#"> <img src="images/featurette12.jpg" ></a>
+			</div>
+			<div class="last-post-content col-md-6">
+					<span><a href="#">Travel</a></span>
+					<h2><a href="#">Du lịch biển đảo Nha Trang</a></h2>
+					<time>October 17,2018</time>
+					<p>Đặt vé tour...</p>
+			</div>
+		</div>
+		
+		</article>
+		<aside class="col-lg-4">
+			<h3>
+			<a href="#">Vector Hostel</a>
+ 			<span><hr class="featurette-divider"></span>
+		</h3>
+		<div class="about-me">
+			<a href="#"> <img src="images/avatar.jpg"></a>
+			<p><q>Thám hiểm - Mơ mộng - Khám phá </q></p><cite>Vector Hostel</cite>
+		</div>
+		
+		
+		</aside>
+	</div>
+
+</div>
+
+<footer class="container"> 
+	&copy 2018 - All right reserved. Designed and developed by <span>Nguyen Duc Thai</span> Phone: 0986604577.
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model IEnumerable<VectorHostel.Models.PHIEUDATGIUONG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout =  "~/Views/Share/_LayoutPage1.cshtml";
+   
+}
+
+<h2>Danh sách phòng</h2>
+
+<p>
+    @Html.ActionLink("Tạo mới", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            mã phiếu
+        </th>
+        <th>
+            số lượng giường
+        </th>
+        
+       
+        <th>
+            @Html.DisplayNameFor(model => model.khachhang.hoten)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.maphieu)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.soluong_giuong)
+        </td>
+        
+        <td>
+            @Html.DisplayFor(modelItem => item.khachhang.hoten)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.maphieu.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { id=item.maphieu.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.maphieu.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

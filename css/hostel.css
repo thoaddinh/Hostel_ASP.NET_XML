@@ -1,0 +1,515 @@
+*{
+	margin:0;
+padding: 0;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+}
+
+body{
+	background-color: #111111;
+}
+a, a:hover{
+	text-decoration: none;
+}
+q, cite{
+	color:#afafaf;
+}
+h3{
+	font-size: 15px;
+}
+#form1{
+	
+	position:absolute;
+	top: 50%;
+	right: 50px;
+
+}
+#form2{
+
+}
+.fa-blogger{
+	margin:0 auto;
+}
+#form2 input{
+width: 90%;
+}
+#form2 button{
+	display: inline-block;
+}
+.banner{
+	background:url(image/banner2.jpg) center no-repeat;
+position: relative;	
+height: 200px;
+width: 100%;
+	
+
+}
+
+header img{
+	max-width: 100%;
+	height: auto;
+}
+.fa-blogger{
+	font-size: 40px;
+}
+#navbar-right span:hover{
+color: yellow;
+}
+/*------------------------------modal-----------------------------------*/
+
+
+/*------------------------------------------ket thuc modal---------------*/
+.container-fluid{
+	margin:0;
+	padding: 0;
+}
+#menu1 .dropdown-menu li:hover{
+	background-color: none;
+
+}
+#menu1 .dropdown-menu li a:hover{
+	color: green;
+	font-weight: bold;
+}
+#myCarousel{
+	position: relative;
+
+}
+
+.carousel-item .img{
+	
+	width: 100%;
+	object-fit: cover;
+}
+#myCarousel img{
+	width: 100%;
+	height: 40vw;
+	object-fit: cover;
+}
+#logo{
+	width: 100%;
+	height: 200px;
+	margin: 0 auto;
+
+
+}
+#logo a{	width: 200px;
+	height: 100%;
+	
+}
+#logo a img{
+	height: 100%;
+	border-radius: 50%;
+}
+#c1{
+	float:left;
+}
+/*------modal----*/
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.modal button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 7px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.modal button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.modal .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.modal .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.modal .avatar {
+    width: auto;
+    height: 150px;
+   border-radius: 50%;
+}
+
+.modal .container {
+    padding: 16px;
+}
+
+.modal  span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 25%;
+    top: 0;
+
+    width: 50%; 
+    height: 100%;
+     /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 30px;
+
+}
+.modal label{
+	color: orange;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+}
+/* ----------------------------------article-------------------------- */
+.featurette{
+margin: 5rem 0 1rem 0;
+text-align: left;
+
+}
+.featurette-divider{
+	
+	border-color: white;
+}
+.featurette a{
+	color:white;
+
+}
+.featurette img{
+	object-fit: cover;
+	width: 100%;
+	height: 165px;
+}
+.featurette-title{
+	margin-top: 5px;
+	margin-bottom: 0px;
+	font-weight: bold;
+}
+.featurette-time{
+	margin-bottom: 20px;
+	color: #666666;
+}
+.travel{
+	position: relative;
+	margin-bottom: 30px;
+}
+.travel img{
+	object-fit: cover;
+	width: 100%;
+}
+.travel-content{
+	position: absolute;
+	bottom: auto;
+	top: 50%;
+	left: 0;
+	padding: 10px 20px;
+	text-align: center;
+	transform: translateY(-50%);
+	z-index: 5;
+	width: 100%;
+}
+.travel-content .title,.travel-content .time{
+		color: #fff
+
+}
+.travel-content .title{
+	margin-bottom: 0;
+}
+.last-post{
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 20px;
+}
+.last-post img, .about-me img, .recent-post img{
+	object-fit: cover;
+	width: 100%;
+}
+.last-post-content span a{
+	color: orange;
+
+}
+.last-post-content h2{
+	font-size: 18px;
+}
+.last-post-content time{
+	color: #666666;
+}
+.last-post-content p{
+	color: #afafaf;
+}
+/*-----Qli---*/
+.QL1 .featurette{
+	padding: 120px;
+	padding-bottom: 0px;
+	overflow: hidden;
+}
+. .QL1 .featurette-image{
+	margin-top: -120px;
+}
+.QL1 .pull-right{
+	margin-left: 40px;
+
+}
+.QL1 .pull-left{
+	margin-right: 40px;
+
+}
+.pull-right{float: right;}
+.QL1 img{
+	height:300px;
+	width: 250px;
+	max-width: 50%;
+	vertical-align: middle;
+	border:0;
+}
+.QL1 .featurette-divider{
+	margin: 80px 0;
+
+}
+.pull-left{
+	float: left;
+
+}
+/*-----------------------------------------about me---------------*/
+.about-me{
+	text-align: center;
+	margin-bottom: 20px;
+}
+.about-me img{
+	height: 500px;
+	margin-bottom: 20px;
+}
+
+text-area{
+	width: 100%;
+}
+article form button{
+	margin-left: 50%
+}
+.container hr{
+	border-color: #313131;
+}
+blockquote{
+	background:#2b2b2b;
+	padding: 10px 20px 10px 24px;
+	position:relative;
+	overflow: hidden;
+	font-size: 16px;
+	color: #888;
+	font-style: italic;
+	line-height: 1.7;
+	text-align: left;
+	margin: 0 0 20px 0	;
+}
+.post img{
+object-fit: cover;
+width: 100%;
+height: 30%;
+}
+.post .date, .post span{
+color: #666666;
+
+}
+.post .date{
+	border-left: 1px solid #313131;
+	margin-left: 10px;
+	padding-left: 10px;
+}
+.post p{
+	color: #afafaf;
+}
+.post .post-tags{
+	display: block;
+	position: relative;
+	z-index: 10;
+	color: #888;
+	margin-bottom: 0;
+	line-height: 1.4;
+	margin-top: 31px;
+}
+.post-tags a{
+	border:1px solid #DEDEDE;
+	text-transform: uppercase;
+	color: #888;
+	padding: 6px 12px 5px;
+	margin-right: 8px;
+	margin-bottom: 8px;
+	display: inline-block;
+	font-size: 11px;
+	line-height: 1.2;
+	transition: all 0.3s;
+}
+.post-tags a:hover{
+	background-color: yellow;
+}
+.tag-below{
+	text-align: center;
+	padding: 15px 0;
+	display: table;
+	width: 100%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	position:relative;
+	clear: both;
+	border-top: 1px solid #DEDEDE;
+	font-size: 14px;
+	border-bottom: 1px solid #DEDEDE;
+	color: #666666;
+}
+.tag-below .fab, .tag-below .far{
+	display:inline-block; 
+}
+.tag-below .comment{
+	margin-right: 5px;
+	color: #888;
+}
+.post-share{
+	position: static;
+	display: inline-block;
+	z-index: 10;
+	border-left: 1px solid #313131;
+	right: 0;
+	top: 20px;
+	margin-left:5px;
+	padding-left: 5px;
+}
+.list-box-share{
+	display: inline-block;
+	border-left: 1px solid #313131;
+	margin-left: 5px;
+	padding-left: 5px;
+
+}
+.phanhoi img{
+
+	float: left;
+	margin-right: 20px;
+	overflow: hidden;
+	max-width: 100%;
+	vertical-align: top;
+	height: auto;
+	height: 100px;
+	width: 100px;
+}
+.phanhoi{
+	clear: both;
+}
+.phanhoi button{
+	margin-top: 10px;
+}
+.author-content{
+	margin-left:120px;
+
+}
+.author-content h5{
+	font-size: 14px;
+	letter-spacing: 1px;
+	margin: 0 0 15px;
+	color: #313131;
+	display: block;
+	text-transform: uppercase;
+}
+.author-content p{
+	margin-bottom: 16px;
+	line-height: 1.8;
+}
+.post text-area{
+	padding: 15px 20px;
+	border: 1px solid #DEDEDE;
+	width: 100%;
+	height: 120px;
+	font-size: 12px;
+	margin-bottom: 28px;
+	line-height: 20px;
+	font-weight: 500;
+	vertical-align: top;
+	min-height: 100px;
+	background-color: none;	
+}
+form input{
+	text-align: left;
+}
+
+footer{
+	border-top: 1px solid #313131;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color: #afafaf;
+	margin-top: 20px;
+}
+footer span{
+	color: orange;
+}
+
+

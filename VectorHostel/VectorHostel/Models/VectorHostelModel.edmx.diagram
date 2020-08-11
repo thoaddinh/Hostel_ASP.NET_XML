@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d2d5656f4d334edc832fea5ebff1e9ed" Name="Diagram1">
+        <EntityTypeShape EntityType="VectorHostelModel.chi_tiet_dat_giuong" Width="1.5" PointX="7.5" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.giuong" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.khachhang" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.loaigiuong" Width="1.5" PointX="3" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.loaiphong" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.PHIEUDATGIUONG" Width="1.5" PointX="5.25" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VectorHostelModel.phong" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="VectorHostelModel.FK_chi_tiet_dat_giuong_giuong" ManuallyRouted="false" />
+        <AssociationConnector Association="VectorHostelModel.FK_chi_tiet_dat_giuong_PHIEUDATGIUONG" ManuallyRouted="false" />
+        <AssociationConnector Association="VectorHostelModel.FK_giuong_loaigiuong" ManuallyRouted="false" />
+        <AssociationConnector Association="VectorHostelModel.FK_giuong_phong" ManuallyRouted="false" />
+        <AssociationConnector Association="VectorHostelModel.FK_PHIEUDATGIUONG_khachhang" ManuallyRouted="false" />
+        <AssociationConnector Association="VectorHostelModel.FK_phong_loaiphong" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

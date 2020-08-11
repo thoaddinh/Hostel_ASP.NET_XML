@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "thanhtoan";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+    
+}
+
+<h2>Thanh toán</h2>
+<div>
+   @using (Html.BeginForm("thanhtoan", "chi_tiet_dat_giuong", FormMethod.Get))
+   {
+    @Html.AntiForgeryToken()
+        <table>
+            <tr>
+                <td>Mã khách hàng</td>
+                <td><input type="text" name="makh" value="@ViewBag.makh"/></td>
+            </tr>
+            <tr>
+                <td>họ tên khách hàng</td>
+                <td><input type="text" name="hoten" value="@ViewBag.hoten" /></td>
+            </tr>
+            <tr>
+                <td>Ngày đến</td>
+                <td><input type="date" name="ngayden" value="@ViewBag.makh" /></td>
+            </tr>
+            <tr>
+                <td>Ngày đi</td>
+                <td><input type="date" name="ngayden" value="@ViewBag.makh" /></td>
+            </tr>
+            <tr>
+                <td>Số lượng giường đặt:</td>
+                <td><input type="date" name="ngayden" value="@ViewBag.makh" /></td>
+            </tr>
+            <tr>
+                <td>Mã giường:</td>
+                <td>@Html.DropDownList("",null,"tất cả",htmlAttributes: new { @class ="form-control"})</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+   }
+</div>
+

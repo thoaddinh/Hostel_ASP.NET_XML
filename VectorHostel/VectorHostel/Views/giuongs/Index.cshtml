@@ -1,0 +1,58 @@
+﻿@model IEnumerable<VectorHostel.Models.giuong>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+    String tinhtrang = "";
+    String mota = "";
+}
+
+<h2>Danh sách giường</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.mota)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tinhtrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.loaigiuong.tenlg)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.phong.tenphong)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.mota)
+            @{ if (item.mota == null) { mota = "Chưa mô tả"; }
+            }@mota
+        </td>
+        <td>
+           
+            @{ if (item.tinhtrang == true) { tinhtrang = "Full"; } else { tinhtrang = "Empty"; }
+            }@tinhtrang 
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.loaigiuong.tenlg)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.phong.tenphong)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.magiuong }) |
+            @Html.ActionLink("Details", "Details", new { id=item.magiuong }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.magiuong })
+        </td>
+    </tr>
+}
+
+</table>

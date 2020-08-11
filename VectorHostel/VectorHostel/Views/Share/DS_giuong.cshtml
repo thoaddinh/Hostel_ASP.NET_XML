@@ -1,0 +1,27 @@
+﻿@model List<VectorHostel.Models.loaigiuong>
+
+    @{ int i = 1;
+        if (Model == null)
+        { <p>Ko có dữ liệu</p>}
+        else
+        {
+            foreach (var item in Model)
+            {
+                if (i < 7)
+
+                {
+        <div class="col-lg-3 col-md-5 text-center row_item">
+            <a href="#"> <img src="/images/@item.hinhanh"></a>
+            <p class="featurette-type">@item.tenlg</p>
+            <p class="featurette-price">Giá: @item.dongia.ToString()</p>
+            <div class="link-btn">@Html.ActionLink("Chọn giường","Create","PHIEUDATGIUONGs", new { malg = item.malg.Trim() },null)</div>
+
+        </div>
+
+                    i++;
+                <div class="col-md-1"></div>
+                    }
+                }
+            }
+        }
+

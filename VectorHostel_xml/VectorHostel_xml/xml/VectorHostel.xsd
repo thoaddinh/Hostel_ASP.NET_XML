@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:element name="QLPT">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="phongtro">
+                    <xs:complexType>
+                        <xs:sequence maxOccurs="1" minOccurs="1">
+                            <xs:element name="maphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tenphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:whiteSpace value="preserve"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:integer">
+                                        <xs:minInclusive value="1"/>
+                                        <xs:maxInclusive value="4"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tinhtrang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="full|empty"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="mota">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:whiteSpace value="preserve"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="malp">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[LP][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="loaiphong">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="malp">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[LP][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tenlp" type="xs:string"/>
+                            <xs:element name="dongia">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:double">
+                                        <xs:minInclusive value="100"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="phieuthue">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="maphieu">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ngaythue" type="xs:date"/>
+                            <xs:element name="ngaytra" type="xs:date"/>
+                            <xs:element name="maphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="makh">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[K][H][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="khach">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="makh">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[K][H][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="cmnd">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{9}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="hoten">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:whiteSpace value="preserve"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="sdt">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{4}[.][0-9]{6}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="diachi">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:whiteSpace value="preserve"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="gioitinh">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="nam|nữ"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="ngaysinh" type="xs:date"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="phieuthanhtoan">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="maphieutt">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][T][T][0-9][0-9]"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="maphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="tiendien" type="xs:double"/>
+                            <xs:element name="tiennuoc" type="xs:double"/>
+                            <xs:element name="thang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="1"/>
+                                        <xs:maxInclusive value="12"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nam">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="2000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="phieuthudien">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="maptd">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][T][D][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="maphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="chisocu" type="xs:decimal"/>
+                            <xs:element name="chisomoi" type="xs:decimal"/>
+                            <xs:element name="thang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="1"/>
+                                        <xs:maxInclusive value="12"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nam">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:pattern value="[\-+]?[0-9]+"/>
+                                        <xs:minInclusive value="2000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element maxOccurs="unbounded" minOccurs="5" name="phieuthunuoc">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="maptn">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][T][N][0-9]{2}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="maphong">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[P][0-9]{3}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="chisocu" type="xs:decimal"/>
+                            <xs:element name="chisomoi" type="xs:decimal"/>
+                            <xs:element name="thang">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="1"/>
+                                        <xs:maxInclusive value="12"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                            <xs:element name="nam">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:int">
+                                        <xs:minInclusive value="2000"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="ID_phongtro">
+            <xs:selector xpath="phongtro"/>
+            <xs:field xpath="maphong"/>
+        </xs:key>
+        <xs:key name="ID_loaiphong">
+            <xs:selector xpath="loaiphong"/>
+            <xs:field xpath="malp"/>
+        </xs:key>
+        <xs:key name="ID_phieuthue">
+            <xs:selector xpath="phieuthue"/>
+            <xs:field xpath="maphieu"/>
+        </xs:key>
+        <xs:key name="ID_khach">
+            <xs:selector xpath="khach"/>
+            <xs:field xpath="makh"/>
+        </xs:key>
+        <xs:key name="ID_phieuTT">
+            <xs:selector xpath="phieuthanhtoan"/>
+            <xs:field xpath="maphieutt"/>
+        </xs:key>
+        <xs:key name="ID_phieudien">
+            <xs:selector xpath="phieuthudien"/>
+            <xs:field xpath="maptd"/>
+        </xs:key>
+        <xs:key name="ID_phieunuoc">
+            <xs:selector xpath="phieuthunuoc"/>
+            <xs:field xpath="maptn"/>
+        </xs:key>
+        <xs:keyref name="IDREF_phong_lp" refer="ID_loaiphong">
+            <xs:selector xpath="phongtro"/>
+            <xs:field xpath="malp"/>
+        </xs:keyref>
+        <xs:keyref name="IDREF_phieuthue_phong" refer="ID_phongtro">
+            <xs:selector xpath="phieuthue"/>
+            <xs:field xpath="maphong"/>
+        </xs:keyref>
+        <xs:keyref name="IDREF_phieuthue_khach" refer="ID_khach">
+            <xs:selector xpath="phieuthue"/>
+            <xs:field xpath="makh"/>
+        </xs:keyref>
+        <xs:keyref name="IDREF_ptt_phong" refer="ID_phongtro">
+            <xs:selector xpath="phieuthanhtoan"/>
+            <xs:field xpath="maphong"/>
+        </xs:keyref>
+    </xs:element>
+</xs:schema>

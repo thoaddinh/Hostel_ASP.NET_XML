@@ -1,0 +1,59 @@
+﻿@model VectorHostel.Models.PHIEUDATGIUONG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Share/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHIEUDATGIUONG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ngayden)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngayden)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ngaydi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ngaydi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.soluong_giuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.soluong_giuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.magiuong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.magiuong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.khachhang.hoten)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.khachhang.hoten)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maphieu }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

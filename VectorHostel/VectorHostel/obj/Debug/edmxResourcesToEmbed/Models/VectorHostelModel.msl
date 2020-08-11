@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VectorHostelModelStoreContainer" CdmEntityContainer="VectorHostelEntities1">
+    <EntitySetMapping Name="chi_tiet_dat_giuong">
+      <EntityTypeMapping TypeName="VectorHostelModel.chi_tiet_dat_giuong">
+        <MappingFragment StoreEntitySet="chi_tiet_dat_giuong">
+          <ScalarProperty Name="maphieu" ColumnName="maphieu" />
+          <ScalarProperty Name="magiuong" ColumnName="magiuong" />
+          <ScalarProperty Name="ngayden" ColumnName="ngayden" />
+          <ScalarProperty Name="ngaydi" ColumnName="ngaydi" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="giuong">
+      <EntityTypeMapping TypeName="VectorHostelModel.giuong">
+        <MappingFragment StoreEntitySet="giuong">
+          <ScalarProperty Name="magiuong" ColumnName="magiuong" />
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="malg" ColumnName="malg" />
+          <ScalarProperty Name="tinhtrang" ColumnName="tinhtrang" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="khachhang">
+      <EntityTypeMapping TypeName="VectorHostelModel.khachhang">
+        <MappingFragment StoreEntitySet="khachhang">
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="hoten" ColumnName="hoten" />
+          <ScalarProperty Name="ngaysinh" ColumnName="ngaysinh" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="gioitinh" ColumnName="gioitinh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loaigiuong">
+      <EntityTypeMapping TypeName="VectorHostelModel.loaigiuong">
+        <MappingFragment StoreEntitySet="loaigiuong">
+          <ScalarProperty Name="malg" ColumnName="malg" />
+          <ScalarProperty Name="tenlg" ColumnName="tenlg" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="hinhanh" ColumnName="hinhanh" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="loaiphong">
+      <EntityTypeMapping TypeName="VectorHostelModel.loaiphong">
+        <MappingFragment StoreEntitySet="loaiphong">
+          <ScalarProperty Name="malp" ColumnName="malp" />
+          <ScalarProperty Name="tenlp" ColumnName="tenlp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PHIEUDATGIUONG">
+      <EntityTypeMapping TypeName="VectorHostelModel.PHIEUDATGIUONG">
+        <MappingFragment StoreEntitySet="PHIEUDATGIUONG">
+          <ScalarProperty Name="maphieu" ColumnName="maphieu" />
+          <ScalarProperty Name="makh" ColumnName="makh" />
+          <ScalarProperty Name="soluong_giuong" ColumnName="soluong_giuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="phong">
+      <EntityTypeMapping TypeName="VectorHostelModel.phong">
+        <MappingFragment StoreEntitySet="phong">
+          <ScalarProperty Name="maphong" ColumnName="maphong" />
+          <ScalarProperty Name="tenphong" ColumnName="tenphong" />
+          <ScalarProperty Name="malp" ColumnName="malp" />
+          <ScalarProperty Name="tang" ColumnName="tang" />
+          <ScalarProperty Name="sogiuong" ColumnName="sogiuong" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
